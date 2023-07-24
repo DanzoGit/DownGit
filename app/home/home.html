@@ -4,7 +4,7 @@
     <div class="vertical-space"></div>
     <h1><a href="https://minhaskamal.github.io/DownGit">DownGit</a></h1>
     <div class="center-row"></div>
-    <h4>Create GitHub Resource Download Link</h4>
+    <h4>Создать ссылку для скачивания каталога GitHub</h4>
 
 
     <div class="vertical-space"></div>
@@ -12,15 +12,15 @@
         <input name="url" type="url" placeholder="GitHub File or Directory Link" class="form-control" ng-model="url" ng-keypress="catchEnter($event)"></input>
     </div>
     <div class="btn-group center-row">
-        <button type="button" class="btn btn-default" ng-click="createDownLink()">Create Download Link</button>
-        <button type="button" class="btn btn-default" ng-click="download()">Download</button>
+        <button type="button" class="btn btn-default" ng-click="createDownLink()">Создать ссылку для скачивания</button>
+        <button type="button" class="btn btn-default" ng-click="download()">Скачать</button>
     </div>
 
 
     <div ng-show="isProcessing.val">
         <div class="vertical-space"></div>
         <img class="processing-img" src="res/images/processing.gif" />
-        <p>Downloaded {{downloadedFiles.val}} of {{totalFiles.val}} files</p>
+        <p>Загружено {{downloadedFiles.val}} из {{totalFiles.val}} файлов</p>
     </div>
 
 
@@ -31,9 +31,9 @@
 
     <div class="vertical-space"></div>
     <div class="footer">
-        <a class="donate-button" target="_blank" href="https://www.paypal.com/donate/?business=5KR6BA9MYTM62&no_recurring=0&currency_code=USD">Donate to The Project</a>
+        <!-- <a class="donate-button" target="_blank" href="https://www.paypal.com/donate/?business=5KR6BA9MYTM62&no_recurring=0&currency_code=USD">Donate to The Project</a> -->
         <div class="vertical-space"></div>
-        <a target="_blank" href="https://github.com/MinhasKamal/DownGit">DownGit</a> by <a target="_blank" href="https://github.com/MinhasKamal">Minhas Kamal</a>
+        <a target="_blank" href="https://github.com/MinhasKamal/DownGit">Оригинал DownGit</a> от <a target="_blank" href="https://github.com/MinhasKamal">Minhas Kamal</a>
     </div>
 
 </div>
