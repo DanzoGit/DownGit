@@ -32,7 +32,8 @@ homeModule.config([
 
                     var templateUrl = "https?://github.com/.+/.+";
                     var downloadUrlInfix = "#/home?url=";
-                    var downloadUrlPrefix = "https://danzogit.github.io/DownGit/"+downloadUrlInfix;
+                    var currentDomain = window.location.protocol + "//" + window.location.host + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+                    var downloadUrlPrefix = currentDomain + "/" + downloadUrlInfix;
 
                     if ($routeParams.url) {
                         $scope.url = $routeParams.url;
@@ -77,6 +78,10 @@ homeModule.config([
 
                     $scope.download = function() {
                         window.location = downloadUrlInfix+$scope.url;
+                    };
+
+                    $scope.openCurrentDomain = function() {
+                        window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
                     };
 
                 }],
